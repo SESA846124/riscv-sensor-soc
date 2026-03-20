@@ -1,7 +1,12 @@
 name: Hello World
 
 on:
- workflow_dispatch
+ workflow_dispatch:
+   inputs:
+     name:
+       description: 'Your name'
+       required: true
+       
 jobs:
   name: greetings
     steps:
