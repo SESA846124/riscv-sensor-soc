@@ -1,11 +1,11 @@
 name: Hello World
-
+run-name: Print Hello World
 on:
- workflow_dispatch:
-   inputs:
-     name:
-       description: 'Your name'
-       required: true
+  workflow_dispatch:
+    inputs:
+      Confirm Yes:
+        description: 'Type "yes" to confirm'
+        required: true
        
 jobs:
   name: greetings
