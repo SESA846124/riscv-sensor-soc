@@ -1,0 +1,12 @@
+name: Hello World
+
+on:
+ workflow_dispatch
+jobs:
+  name: greetings
+    steps:
+      - name: Greet
+        run: echo "Hello world!"
+
+      - name: Greet again
+        run: echo "Hello again!"
