@@ -1,0 +1,13 @@
+name : printing branch name
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  print_branch_name:
+    runs-on: [self-hosted,linux]
+    steps:
+      - name: Print the branch name
+        run: echo "The branch that triggered this workflow is: ${{ github.ref }}"
