@@ -1,15 +1,21 @@
-name: Hello World
+name: Test Self-Hosted Runner
 
 on:
-  push :
-    branches:
-      - main
-       
+  workflow_dispatch:
+
 jobs:
-  name: greetings
-  runs on: [self-hosted,linux]
+  test-runner:
+    runs-on: self-hosted   # ✅ Works with your current runner setup
 
     steps:
-      - name: Greet
-        run: echo "Hello World! This is my first GitHub Action workflow."
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
+      - name: Print basic info
+        run: |
+          echo "✅ Self-hosted runner is working!"
+          echo "Runner OS: $(uname -a)"
+          echo "Current directory:"
+          pwd
+          echo "Listing files:"
+          ls -al
