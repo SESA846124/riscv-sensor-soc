@@ -1,10 +1,10 @@
-name : printing branch name
-
+name: Show Branch
+ 
 on: [push]
-
+ 
 jobs:
-  print_branch_name:
-    runs-on: [self-hosted,linux]
+  branch-info:
+    runs-on: ubuntu-latest
     steps:
-      - name: Print the branch name
-        run: echo "branch that triggered this workflow is: ${{ github.ref }}"
+      - name: Print branch name
+        run: echo "Branch: ${{ github.ref_name }}"
