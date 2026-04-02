@@ -8,6 +8,7 @@ on:
 jobs:
   print_branch_name:
     runs-on: [self-hosted,linux]
-    steps:
+
+  steps:
       - name: Print the branch name
         run: echo "The branch that triggered this workflow is: ${{ github.ref }}"
