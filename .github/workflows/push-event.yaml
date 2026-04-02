@@ -1,9 +1,6 @@
 name : printing branch name
 
-on: 
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
   print_branch_name:
